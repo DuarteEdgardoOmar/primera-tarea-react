@@ -1,0 +1,7 @@
+.estilo-imagen-fondo{
+  background-image: url(../image/tmdb-fondo.jpg);
+}
+
+.estilo-contenedor{
+  width: 95%;
+}
