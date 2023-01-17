@@ -3,39 +3,39 @@ import Barra from "../components/barranav"
 import Jumbotron from "../components/jumbotron";
 import MenuMasPopular from "../components/menu-mas-popular";
 import Card from "../components/card-peliculas";
-import axios from 'axios';
+// import axios from 'axios';
 
 
 /**llamada a la api de the movie data base para pedir las pelis mas populares */
 
-var arregloPeliculas = [];
+// var arregloPeliculas = [];
 
-const cargarPeliculas = async ()=>{
+// const cargarPeliculas = async ()=>{
 
-    try{
+//     try{
 
-        const response = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=1a9c430f2b7790ae359c7c5e016f0223&Languaje=es-MX');
+//         const response = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=1a9c430f2b7790ae359c7c5e016f0223&Languaje=es-MX');
 
-        if(response.status===200){
+//         if(response.status===200){
 
-            console.log(response)
+//             console.log(response)
     
-            arregloPeliculas = response.data.results;
+//             arregloPeliculas = response.data.results;
         
-        }else{
+//         }else{
 
-            console.log("algo salio mal...")
-        }
+//             console.log("algo salio mal...")
+//         }
 
-    }catch(error){
+//     }catch(error){
 
-        console.log(error)
+//         console.log(error)
 
-    }
+//     }
 
-}
+// }
 
-cargarPeliculas();
+// cargarPeliculas();
 
 const App = ()=>{
 
@@ -54,7 +54,7 @@ const App = ()=>{
             </div>
 
             <div className="row d-flex d-wrap">
-                <Card arreglo={arregloPeliculas}/>
+                <Card/>
             </div>
         </div>
  
