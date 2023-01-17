@@ -5,39 +5,34 @@ import MenuMasPopular from "../components/menu-mas-popular";
 import Card from "../components/card-peliculas";
 // import axios from 'axios';
 
+//  // /**llamada a la api de the movie data base para pedir las pelis mas populares */
+//  var arregloPeliculas = [];
 
-/**llamada a la api de the movie data base para pedir las pelis mas populares */
-
-// var arregloPeliculas = [];
-
-// const cargarPeliculas = async ()=>{
-
-//     try{
-
-//         const response = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=1a9c430f2b7790ae359c7c5e016f0223&Languaje=es-MX');
-
+//  const cargarPeliculas = async ()=>{
+//      try{
+//          const response = await axios.get('https://api.themoviedb.org/3/movie/popular?api_key=1a9c430f2b7790ae359c7c5e016f0223&Languaje=es-MX');
 //         if(response.status===200){
 
-//             console.log(response)
-    
-//             arregloPeliculas = response.data.results;
-        
+//              console.log(response)
+
+//              arregloPeliculas = response.data.results;
+
 //         }else{
 
-//             console.log("algo salio mal...")
-//         }
+//             console.log("algo salio mal...");
+//          }
 
-//     }catch(error){
+//      }catch(error){
 
-//         console.log(error)
+//           console.log(error)
 
-//     }
+//       }
 
-// }
+//   }
 
-// cargarPeliculas();
+//   cargarPeliculas();
 
-const App = ()=>{
+ const App = (props)=>{
 
     return(
         <div className="container-fluid d-flex-column">
@@ -54,7 +49,7 @@ const App = ()=>{
             </div>
 
             <div className="row d-flex d-wrap">
-                <Card/>
+                <Card arreglo1={props.arreglo}/>
             </div>
         </div>
  
