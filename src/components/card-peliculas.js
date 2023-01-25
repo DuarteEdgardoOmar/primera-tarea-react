@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../styles/estilo-card.css"
+import { mobieContext } from "../pages/app";
 
+const Card = ()=>{
 
-const Card = (props)=>{
-
-
+    const arreglo1 = useContext(mobieContext);//recupero contexto creado
    
     /**manejador de evento click en link */
     const handleClick=(e)=>{
@@ -13,7 +13,7 @@ const Card = (props)=>{
 
     return(
 
-        props.arreglo1.map((pelicula)=>{
+        arreglo1.map((pelicula)=>{
             
             var path = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
 
